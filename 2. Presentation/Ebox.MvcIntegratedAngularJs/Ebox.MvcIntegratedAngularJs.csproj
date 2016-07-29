@@ -122,6 +122,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Feature\Authentication\AuthenticatedUser.cs" />
     <Compile Include="Feature\Authentication\LoginCommand.cs" />
+    <Compile Include="Feature\JobSeekerAccount\IJobSeekerRepository.cs" />
     <Compile Include="Feature\Registration\RegistrationCommand.cs" />
     <Compile Include="Feature\JobSeekerAccount\JobSeeker.cs" />
     <Compile Include="Feature\JobSeekerAccount\Resume.cs" />
@@ -186,6 +187,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Feature\JobApplication\" />
+    <Folder Include="Scripts\App\Home\Controllers\" />
+    <Folder Include="Scripts\App\Home\Directives\" />
+    <Folder Include="Scripts\App\Home\Services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
