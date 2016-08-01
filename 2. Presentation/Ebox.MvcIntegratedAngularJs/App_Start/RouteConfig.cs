@@ -13,25 +13,25 @@ namespace Ebox.MvcIntegratedAngularJs
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                            name: "about",
-                            url: "about/{*catch-all}",
-                            defaults: new
-                            {
-                                controller = "Home",
-                                action = "about"
-                            });
+            //routes.MapRoute(
+            //                name: "about",
+            //                url: "about/{*catch-all}",
+            //                defaults: new
+            //                {
+            //                    controller = "Home",
+            //                    action = "about"
+            //                });
 
-            routes.MapRoute(
-                name: "contact",
-                url: "contact/{*catch-all}",
-                defaults: new
-                {
-                    controller = "Home",
-                    action = "contact"
-                });
+            //routes.MapRoute(
+            //    name: "contact",
+            //    url: "contact/{*catch-all}",
+            //    defaults: new
+            //    {
+            //        controller = "Home",
+            //        action = "contact"
+            //    });
 
-            routes.MapMvcAttributeRoutes();
+            //routes.MapMvcAttributeRoutes();
 
             routes.MapRoute(
                 name: "Default",
