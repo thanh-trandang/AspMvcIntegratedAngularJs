@@ -9,7 +9,7 @@ namespace Ebox.MvcIntegratedAngularJs.Feature.Registration
     public class RegistrationCommand
     {
         [Required]
-        [Display(Description = "User name"]
+        [Display(Description = "User name")]
         public String UserName { get; set; }
 
         [Required]

@@ -28,7 +28,10 @@ namespace Ebox.MvcIntegratedAngularJs
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
-                "~/Scripts/angular.js"));
+                "~/Scripts/angular.js",
+                "~/Scripts/angular-route.js",
+                "~/Scripts/angular-ui-router.js",
+                "~/Scripts/App/app.js"));
         }
     }
 }
