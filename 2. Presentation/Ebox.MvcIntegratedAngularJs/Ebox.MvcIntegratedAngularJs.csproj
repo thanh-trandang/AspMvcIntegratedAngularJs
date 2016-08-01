@@ -157,7 +157,8 @@
     <Content Include="Scripts\angular.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\App\app.js" />
-    <Content Include="Scripts\App\Home\Controllers\homeCtrl.js" />
+    <Content Include="Scripts\App\About\App.js" />
+    <Content Include="Scripts\App\About\Controllers\AboutCtrl.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -191,8 +192,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Feature\JobApplication\" />
-    <Folder Include="Scripts\App\Home\Directives\" />
-    <Folder Include="Scripts\App\Home\Services\" />
+    <Folder Include="Scripts\App\About\Directives\" />
+    <Folder Include="Scripts\App\About\Services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

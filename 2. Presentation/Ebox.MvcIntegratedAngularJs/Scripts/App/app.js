@@ -1,38 +1,47 @@
-﻿var EBoxAngularMVCApp = angular.module("EBoxAngularMVCApp", ['ui.router']);
+﻿var commonModule = angular.module('Common', ['ngRoute']);
+var EboxMain = angular.module('EboxMain', ['Common']);
 
-// EBoxAngularMVCApp.controller("HomeController", HomeController);
-var configFunction = function ($stateProvider, $httpProvider, $locationProvider) {
-    $locationProvider.html5Mode({
-        enabled: true,
-        requireBase: false
-    });
+var indexViewModel = function ($scope) {
+    $scope.topic =
+       "Integrating ASP.NET MVC and AngularJS";
+    $scope.author = "Tran Dang Thanh";
 
-    $stateProvider
-        .state('index', {
-            url: '/index?donuts',
-            views: {
-                "containerOne": {
-                    templateUrl: '/Home/Index'
-                },
-                "containerTwo": {
-                    templateUrl: function (params) {
-                        if (params.donuts) {
-                            return '/Home/About?donuts=' + params.donuts;
-                        }
-                        else {
-                            return "/Home/About";
-                        }
-                    }
-                }
-            }
-        });
-};
+    this.search = {
+        keyword: "",
+        placeHolder: "Enter any word"
+    };
 
-configFunction.$inject = ['$stateProvider', '$httpProvider', '$locationProvider'];
-var runFunction = function ($rootScope, $location, $injector) {
-    $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams, options) {
+    this.beginSearch = function () {
+        this.search.keyword = "Your search has been started. Please wait...";
+    };
 
-    });
-};
-runFunction.$inject = ['$rootScope', '$location', '$injector'];
-EBoxAngularMVCApp.config(configFunction).run(runFunction);
+    var initialize = function () {
+        $scope.pageHeading = "Home Section";
+    }
+
+    initialize();
+}
+
+indexViewModel.$inject = ['$scope'];
+EboxMain.controller("indexViewModel", indexViewModel);
+
+//var configFunction = function ($stateProvider, $httpProvider, $locationProvider, $routeProvider) {
+
+//    //$routeProvider.when('/index', { redirectTo: '/Home/Index' });
+//    //$routeProvider.when('/about', { redirectTo: '/about' });
+//    //$routeProvider.when('/contact', { redirectTo: '/contact' });
+
+//    $locationProvider.html5Mode({
+//        enabled: true,
+//        requireBase: false
+//    });
+//};
+
+//configFunction.$inject = ['$stateProvider', '$httpProvider', '$locationProvider', '$routeProvider'];
+//var runFunction = function ($rootScope, $location, $injector) {
+//    $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams, options) {
+
+//    });
+//};
+//runFunction.$inject = ['$rootScope', '$location', '$injector'];
+//EBoxAngularMVCApp.config(configFunction).run(runFunction);

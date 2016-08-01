@@ -1,17 +1,14 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+    <div id="indexViewModel" data-ng-controller="indexViewModel as home">
+        <div class="jumbotron">
+            <h1>Welcome, start your career with us!</h1>
+            <h2>{{ topic }}</h2>
+            <h3>Author: <b>{{ author }}</b></h3>
+        </div>
 
-@section scripts {    
-    <script src="~/Scripts/App/Home/Controllers/homeCtrl.js"></script>
-}
-
-<div id="homeController" ng-controller="HomeController as home">
-    <div class="jumbotron">
-        <h1>Welcome, start your career with us!</h1>
-    </div>
-
-    <div class="row">
+        <div class="row">
             <div class="col-md-2">
 
             </div>
@@ -28,8 +25,7 @@
             <div class="col-md-2">
             </div>
         </div>
-</div>
-
+    </div>
 
 
 

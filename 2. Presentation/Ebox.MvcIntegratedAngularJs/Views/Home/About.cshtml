@@ -4,4 +4,19 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+@section scripts {
+    <script src="~/Scripts/App/About/App.js"></script>
+    <script src="~/Scripts/App/About/Controllers/AboutCtrl.js"></script>
+}
+@section jsCode {
+    angular.bootstrap(document.getElementById("about"), ['AboutModule']);
+}
+
+<div ng-non-bindable>
+    <div id="about" data-ng-controller="AboutController">
+        <h2>{{ pageHeading }}</h2>
+        <p>Use this area to provide additional information.</p>
+    </div>
+</div>
+
+
