@@ -1,4 +1,5 @@
-﻿var HomeController = function ($scope) {
+﻿
+var HomeController = function ($scope) {
     this.search = {
         keyword: "",
         placeHolder: "Enter any word"
@@ -10,3 +11,5 @@
 };
 
 HomeController.$inject = ['$scope'];
+
+angular.module("EBoxAngularMVCApp").controller("HomeController", HomeController);

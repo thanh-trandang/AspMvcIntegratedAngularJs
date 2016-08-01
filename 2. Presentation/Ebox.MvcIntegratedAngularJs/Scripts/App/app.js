@@ -1,7 +1,6 @@
 ﻿var EBoxAngularMVCApp = angular.module("EBoxAngularMVCApp", ['ui.router']);
 
-EBoxAngularMVCApp.controller("HomeController", HomeController);
-
+// EBoxAngularMVCApp.controller("HomeController", HomeController);
 var configFunction = function ($stateProvider, $httpProvider, $locationProvider) {
     $locationProvider.html5Mode({
         enabled: true,
