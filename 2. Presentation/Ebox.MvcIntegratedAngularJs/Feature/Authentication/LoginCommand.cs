@@ -8,10 +8,12 @@ namespace Ebox.MvcIntegratedAngularJs.Feature.Authentication
 {
     public class LoginCommand
     {
-        [Required]
+        [Required(ErrorMessage = "Please enter your email")]
+        [Display(Name = "Email")]
         public String Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter your password")]
+        [Display(Name = "Password")]
         [DataType(DataType.Password)]
         public String Password { get; set; }
 

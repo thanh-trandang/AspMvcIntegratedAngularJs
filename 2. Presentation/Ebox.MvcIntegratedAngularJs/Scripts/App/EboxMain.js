@@ -1,4 +1,5 @@
-﻿var commonModule = angular.module('Common', ['ui.router']);
+﻿var commonModule = angular.module('Common', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'ngAnimate']);
+
 var EboxMain = angular.module('EboxMain', ['Common']);
 
 var HomeController = function ($scope) {

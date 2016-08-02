@@ -26,12 +26,16 @@ namespace Ebox.MvcIntegratedAngularJs
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/bootstrap-theme.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/loading-bar.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                 "~/Scripts/angular.js",
+                "~/Scripts/angular-animate.js",
                 "~/Scripts/angular-route.js",
-                "~/Scripts/angular-ui-router.js"));
+                "~/Scripts/angular-ui-router.js",
+                "~/Scripts/ui-bootstrap-tpls-2.0.1.js",
+                "~/Scripts/loading-bar.js"));
         }
     }
 }
