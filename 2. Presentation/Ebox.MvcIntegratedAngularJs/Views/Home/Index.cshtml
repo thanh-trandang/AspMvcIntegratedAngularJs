@@ -1,31 +1,46 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-    <div data-ng-controller="HomeController as home">
-        <div class="jumbotron">
-            <h1>Welcome, start your career with us!</h1>
-            <h2>{{ topic }}</h2>
-            <h3>Author: <b>{{ author }}</b></h3>
-        </div>
+<div data-ng-controller="HomeController as home">
+    <div class="jumbotron">
+        <h1>Welcome, start your career with us!</h1>
+        <h2>{{ topic }}</h2>
+        <h3>Author: <b>{{ author }}</b></h3>
+    </div>
 
-        <div class="row">
-            <div class="col-md-2">
-
-            </div>
-            <div class="col-md-8">
-                <form role="form" style="text-align: center">
-                    <div class="input-group input-group-lg">
-                        <input type="text" class="form-control input-lg" ng-model="home.search.keyword" placeholder="{{home.search.placeHolder}}" />
-                        <span class="input-group-btn">
-                            <button type="submit" class="btn btn-primary btn-lg" ng-click="home.beginSearch()">Search</button>
-                        </span>
-                    </div>
-                </form>
-            </div>
-            <div class="col-md-2">
-            </div>
+    <div id="searchPredicate" class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form role="form">
+                <div class="input-group input-group-lg">
+                    
+                    <input type="text" class="form-control input-lg" ng-model="home.search.keyword" placeholder="{{home.search.placeHolder}}" />
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default btn-lg" ng-click="home.beginSearch()">
+                            <span class="glyphicon glyphicon-search"></span> 
+                            {{home.search.searchButtonLabel}}
+                        </button>
+                    </span>
+                </div>
+            </form>
         </div>
     </div>
+    <hr />
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    .col-md-4                    
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    .col-md-8
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 
 

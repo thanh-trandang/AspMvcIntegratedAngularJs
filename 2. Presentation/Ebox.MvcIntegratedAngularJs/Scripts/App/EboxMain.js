@@ -8,6 +8,7 @@ var HomeController = function ($scope) {
 
     this.search = {
         keyword: "",
+        searchButtonLabel: "Search",
         placeHolder: "Please enter your keyword..."
     };
 

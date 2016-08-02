@@ -9,10 +9,13 @@ namespace Ebox.MvcIntegratedAngularJs.Feature.Authentication
     public class LoginCommand
     {
         [Required]
-        public String UserName { get; set; }
+        public String Email { get; set; }
 
         [Required]
+        [DataType(DataType.Password)]
         public String Password { get; set; }
+
+        public bool RememberMe { get; set; }
 
     }
 }

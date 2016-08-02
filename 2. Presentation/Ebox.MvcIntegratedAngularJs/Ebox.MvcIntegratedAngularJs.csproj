@@ -119,6 +119,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AuthenticationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Feature\Authentication\AuthenticatedUser.cs" />
     <Compile Include="Feature\Authentication\LoginCommand.cs" />
@@ -156,6 +157,8 @@
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\App\SignIn\App.js" />
+    <Content Include="Scripts\App\SignIn\Controllers\SignInCtrl.js" />
     <Content Include="Scripts\App\EboxMain.js" />
     <Content Include="Scripts\App\About\App.js" />
     <Content Include="Scripts\App\About\Controllers\AboutCtrl.js" />
@@ -188,12 +191,15 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Authentication\SignIn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Feature\JobApplication\" />
     <Folder Include="Scripts\App\About\Directives\" />
     <Folder Include="Scripts\App\About\Services\" />
+    <Folder Include="Scripts\App\SignIn\Directives\" />
+    <Folder Include="Scripts\App\SignIn\Services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
