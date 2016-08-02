@@ -156,7 +156,7 @@
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\App\app.js" />
+    <Content Include="Scripts\App\EboxMain.js" />
     <Content Include="Scripts\App\About\App.js" />
     <Content Include="Scripts\App\About\Controllers\AboutCtrl.js" />
     <Content Include="Scripts\bootstrap.js" />

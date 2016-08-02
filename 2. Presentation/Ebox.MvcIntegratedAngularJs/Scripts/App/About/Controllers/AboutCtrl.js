@@ -4,5 +4,4 @@ var AboutController = function ($scope) {
 }
 AboutController.$inject = ['$scope'];
 
-// angular.module('AboutModule').controller("AboutController", AboutController);
 AboutModule.controller("AboutController", AboutController);

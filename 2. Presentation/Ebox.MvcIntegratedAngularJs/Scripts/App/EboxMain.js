@@ -1,14 +1,14 @@
-﻿var commonModule = angular.module('Common', ['ngRoute']);
+﻿var commonModule = angular.module('Common', ['ui.router']);
 var EboxMain = angular.module('EboxMain', ['Common']);
 
-var indexViewModel = function ($scope) {
+var HomeController = function ($scope) {
     $scope.topic =
        "Integrating ASP.NET MVC and AngularJS";
     $scope.author = "Tran Dang Thanh";
 
     this.search = {
         keyword: "",
-        placeHolder: "Enter any word"
+        placeHolder: "Please enter your keyword..."
     };
 
     this.beginSearch = function () {
@@ -22,8 +22,8 @@ var indexViewModel = function ($scope) {
     initialize();
 }
 
-indexViewModel.$inject = ['$scope'];
-EboxMain.controller("indexViewModel", indexViewModel);
+HomeController.$inject = ['$scope'];
+EboxMain.controller("HomeController", HomeController);
 
 //var configFunction = function ($stateProvider, $httpProvider, $locationProvider, $routeProvider) {
 
