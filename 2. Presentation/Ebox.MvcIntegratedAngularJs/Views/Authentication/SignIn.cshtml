@@ -13,6 +13,18 @@
     angular.bootstrap(document.getElementById("signin"), ['SignInModule']);
 }
 
+<style type="text/css">
+    .valdr-message {
+        display: none;
+    }
+
+        .valdr-message.ng-invalid.ng-touched.ng-dirty {
+            display: inline;
+            font-size: small;
+            color: red;
+        }
+</style>
+
 <div ng-non-bindable>
     <div id="signin" data-ng-controller="SignInController as self">
         <div class="row">
@@ -20,42 +32,44 @@
                 <div class="page-header">
                     <h1>Please sign in...</h1>
                 </div>
-                <form name="signInForm" role="form" novalidate="novalidate" ng-submit="self.signIn()">
-                    <div class="form-group">
+                <form name="signInForm" valdr-type="SignIn" novalidate role="form" ng-submit="signInForm.$valid && self.signIn()">
+                    <div class="form-group" valdr-form-group>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-envelope"></span>
                             </span>
-                            <input name="email" required required-err-type="emailRequired" type="text" class="form-control" ng-model="self.SignInCommand.email" placeholder="Enter your email" />
+                            <input id="email" name="email" type="text" class="form-control" ng-model="self.SignInCommand.email" placeholder="Enter your email" />
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group" valdr-form-group>
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-lock"></span>
                             </span>
-                            <input name="password" required required-err-type="passwordRequired" type="password" class="form-control" ng-model="self.SignInCommand.password" placeholder="Enter your password" />
+                            <input id="password" name="password" type="password" class="form-control" ng-model="self.SignInCommand.password" placeholder="Enter your password" />
                         </div>
-
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="checkbox" ng-model="self.SignInCommand.rememberMe"> Remember me
-                        </label>
                     </div>
 
                     <div class="form-group">
-                        <button class="btn btn-default" type="submit">
+                        <label><input type="checkbox" name="remember" ng-model="self.SignInCommand.rememberMe"> Remember me</label>                        
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-default" type="submit" ng-disabled="signInForm.$invalid">
                             <span class="glyphicon glyphicon-log-in"></span>
                             Sign In
                         </button>
                     </div>
-
+                    <div class="form-group" ng-show="self.SignInCommand.debug">
+                        <textarea class="form-control" rows="10">{{ signInForm.$error | json }}</textarea>
+                    </div>
                 </form>
+
             </div>
 
 
         </div>
+        <input type="checkbox" name="remember" ng-model="self.SignInCommand.debug"><span>Debug</span>
     </div>
 </div>
