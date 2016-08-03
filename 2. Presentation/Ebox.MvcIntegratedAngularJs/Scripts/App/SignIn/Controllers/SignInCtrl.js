@@ -11,12 +11,7 @@
 
     self.message = "";
 
-    $scope.$watch(function (scope) { return scope.signInForm; }, function (value) {
-        scope.signInForm.email.valdrViolations;
-    });
-
     self.signIn = function () {
-        $scope.signInForm.email.valdrViolations;
         $http.post('/Authentication/SignIn', self.SignInCommand)
             .then(function successCallback(response) {
                 // this callback will be called asynchronously

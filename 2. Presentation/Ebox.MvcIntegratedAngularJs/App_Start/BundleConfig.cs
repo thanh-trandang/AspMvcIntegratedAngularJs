@@ -27,7 +27,8 @@ namespace Ebox.MvcIntegratedAngularJs
                       "~/Content/bootstrap.css",
                       "~/Content/bootstrap-theme.css",
                       "~/Content/site.css",
-                      "~/Content/loading-bar.css"));
+                      "~/Content/loading-bar.css",
+                      "~/Content/awesome-bootstrap-checkbox.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                 "~/Scripts/angular/angular.js",

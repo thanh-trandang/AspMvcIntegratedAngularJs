@@ -52,7 +52,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label><input type="checkbox" name="remember" ng-model="self.SignInCommand.rememberMe"> Remember me</label>                        
+                        <div class="checkbox checkbox-circle checkbox-primary">
+                            <input type="checkbox" class="styled" id="remember" name="remember" ng-model="self.SignInCommand.rememberMe">
+                            <label for="remember">
+                                Remember me
+                            </label>
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -70,6 +75,12 @@
 
 
         </div>
-        <input type="checkbox" name="remember" ng-model="self.SignInCommand.debug"><span>Debug</span>
+        <div class="checkbox checkbox-circle checkbox-warning">
+            <input type="checkbox" name="debug" ng-model="self.SignInCommand.debug">
+            <label for="debug">
+                Debug
+            </label>
+        </div>
+        
     </div>
 </div>
