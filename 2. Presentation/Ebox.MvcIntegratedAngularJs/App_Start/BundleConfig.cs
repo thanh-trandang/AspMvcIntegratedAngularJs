@@ -35,7 +35,8 @@ namespace Ebox.MvcIntegratedAngularJs
                 "~/Scripts/angular-route.js",
                 "~/Scripts/angular-ui-router.js",
                 "~/Scripts/ui-bootstrap-tpls-2.0.1.js",
-                "~/Scripts/loading-bar.js"));
+                "~/Scripts/loading-bar.js",
+                "~/Scripts/jcs-auto-validate.js"));
         }
     }
 }

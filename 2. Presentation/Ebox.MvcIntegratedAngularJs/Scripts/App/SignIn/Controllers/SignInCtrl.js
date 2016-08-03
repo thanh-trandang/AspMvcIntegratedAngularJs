@@ -1,5 +1,11 @@
 ﻿
-var SignInController = function ($scope, $http) {
+var SignInController = function ($scope, $http, defaultErrorMessageResolver) {
+
+    defaultErrorMessageResolver.getErrorMessages().then(function (errorMessages) {
+        errorMessages['emailRequired'] = 'Please enter your email!';
+        errorMessages['passwordRequired'] = 'Please enter your password!';
+    });
+
     var self = this;
     self.SignInCommand = {
         email: "",
@@ -24,6 +30,6 @@ var SignInController = function ($scope, $http) {
 }
 
 
-SignInController.$inject = ['$scope', '$http'];
+SignInController.$inject = ['$scope', '$http', 'defaultErrorMessageResolver'];
 
 SignInModule.controller("SignInController", SignInController);

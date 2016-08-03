@@ -1,4 +1,11 @@
-﻿var commonModule = angular.module('Common', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'ngAnimate']);
+﻿var commonModule = angular.module('Common', [
+    'ui.router', 'ui.bootstrap', 'angular-loading-bar', 'ngAnimate', 'jcs-autoValidate']);
+
+commonModule.run(['bootstrap3ElementModifier', 'validator', function (bootstrap3ElementModifier, validator) {
+    // bootstrap3ElementModifier.enableValidationStateIcons(true);
+    validator.setValidElementStyling(false);
+    // validator.setInvalidElementStyling(false);
+}]);
 
 var EboxMain = angular.module('EboxMain', ['Common']);
 
