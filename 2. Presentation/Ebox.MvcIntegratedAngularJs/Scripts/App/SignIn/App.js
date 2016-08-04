@@ -1,4 +1,6 @@
-﻿var SignInModule = angular.module('SignInModule', ['Common'])
+﻿
+(function () {
+    angular.module('SignInModule', ['Common'])
     .config(function ($locationProvider) {
         //$routeProvider.when('/product', { templateUrl: '/App/Product/Views/ProductHomeView.html', controller: 'productHomeViewModel' });
         //$routeProvider.when('/product/list', { templateUrl: '/App/Product/Views/ProductListView.html', controller: 'productListViewModel' });
@@ -10,3 +12,6 @@
         });
 
     });
+
+
+})();

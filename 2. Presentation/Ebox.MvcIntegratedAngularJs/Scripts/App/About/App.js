@@ -1,4 +1,6 @@
-﻿var AboutModule = angular.module('AboutModule', ['Common'])
+﻿
+(function () {
+    angular.module('AboutModule', ['Common'])
     .config(function ($locationProvider) {
         //$routeProvider.when('/product', { templateUrl: '/App/Product/Views/ProductHomeView.html', controller: 'productHomeViewModel' });
         //$routeProvider.when('/product/list', { templateUrl: '/App/Product/Views/ProductListView.html', controller: 'productListViewModel' });
@@ -9,3 +11,5 @@
             requireBase: false
         });
     });
+})();
+

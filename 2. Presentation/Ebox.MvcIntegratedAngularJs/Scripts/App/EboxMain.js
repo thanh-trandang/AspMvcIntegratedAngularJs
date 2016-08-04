@@ -1,32 +1,39 @@
-﻿var commonModule = angular.module('Common', [
+﻿(function () {
+    angular.module('Common', [
     'ui.router', 'ui.bootstrap', 'angular-loading-bar', 'ngAnimate', 'valdr']);
+})();
 
-var EboxMain = angular.module('EboxMain', ['Common']);
 
-var HomeController = function ($scope) {
-    $scope.topic =
-       "Integrating ASP.NET MVC and AngularJS";
-    $scope.author = "Tran Dang Thanh";
+(function () {
+    var EboxMain = angular.module('EboxMain', ['Common']);
 
-    this.search = {
-        keyword: "",
-        searchButtonLabel: "Search",
-        placeHolder: "Please enter your keyword..."
-    };
+    var HomeController = function ($scope) {
+        $scope.topic =
+           "Integrating ASP.NET MVC and AngularJS";
+        $scope.author = "Tran Dang Thanh";
 
-    this.beginSearch = function () {
-        this.search.keyword = "Your search has been started. Please wait...";
-    };
+        this.search = {
+            keyword: "",
+            searchButtonLabel: "Search",
+            placeHolder: "Please enter your keyword..."
+        };
 
-    var initialize = function () {
-        $scope.pageHeading = "Home Section";
+        this.beginSearch = function () {
+            this.search.keyword = "Your search has been started. Please wait...";
+        };
+
+        var initialize = function () {
+            $scope.pageHeading = "Home Section";
+        }
+
+        initialize();
     }
 
-    initialize();
-}
+    HomeController.$inject = ['$scope'];
+    EboxMain.controller("HomeController", HomeController);
+})();
 
-HomeController.$inject = ['$scope'];
-EboxMain.controller("HomeController", HomeController);
+
 
 //var configFunction = function ($stateProvider, $httpProvider, $locationProvider, $routeProvider) {
 
