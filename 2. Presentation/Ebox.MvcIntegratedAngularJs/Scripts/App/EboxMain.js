@@ -1,5 +1,11 @@
 ﻿(function () {
-    angular.module('Common', ['ui.bootstrap', 'ngAnimate', 'valdr', 'blockUI']);
+    angular.module('Common', ['ui.bootstrap', 'ngAnimate', 'valdr', 'blockUI'])
+        .config(function ($locationProvider) {
+            $locationProvider.html5Mode({
+                enabled: true,
+                requireBase: false
+            });
+        });;
 })();
 
 
