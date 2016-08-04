@@ -156,6 +156,8 @@
     <Content Include="Scripts\angular-block-ui\angular-block-ui.js" />
     <Content Include="Scripts\angular-block-ui\angular-block-ui.min.css" />
     <Content Include="Scripts\angular-block-ui\angular-block-ui.min.js" />
+    <Content Include="Scripts\App\Home\App.js" />
+    <Content Include="Scripts\App\Home\Controllers\HomeCtrl.js" />
     <Content Include="Scripts\ui-router\angular-ui-router.js" />
     <Content Include="Scripts\angular\angular.min.js.map" />
     <Content Include="Scripts\angular-block-ui\angular-block-ui.css.map" />
@@ -212,6 +214,8 @@
     <Folder Include="Feature\JobApplication\" />
     <Folder Include="Scripts\App\About\Directives\" />
     <Folder Include="Scripts\App\About\Services\" />
+    <Folder Include="Scripts\App\Home\Directives\" />
+    <Folder Include="Scripts\App\Home\Services\" />
     <Folder Include="Scripts\App\SignIn\Directives\" />
     <Folder Include="Scripts\App\SignIn\Services\" />
   </ItemGroup>
