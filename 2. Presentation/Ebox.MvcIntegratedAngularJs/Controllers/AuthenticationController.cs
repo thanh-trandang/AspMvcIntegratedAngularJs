@@ -18,6 +18,7 @@ namespace Ebox.MvcIntegratedAngularJs.Controllers
         [HttpPost]
         public ActionResult SignIn(LoginCommand logInCommand)
         {
+            System.Threading.Thread.Sleep(10000);
             if (ModelState.IsValid)
             {
                 return Json(new { success = true });

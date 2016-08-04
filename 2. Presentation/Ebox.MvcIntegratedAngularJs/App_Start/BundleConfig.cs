@@ -28,7 +28,8 @@ namespace Ebox.MvcIntegratedAngularJs
                       "~/Content/bootstrap-theme.css",
                       "~/Content/site.css",
                       "~/Content/loading-bar.css",
-                      "~/Content/awesome-bootstrap-checkbox.css"));
+                      "~/Content/awesome-bootstrap-checkbox.css",
+                      "~/Content/angular-block-ui.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                 "~/Scripts/angular/angular.js",
@@ -38,7 +39,8 @@ namespace Ebox.MvcIntegratedAngularJs
                 "~/Scripts/ui-bootstrap/ui-bootstrap-tpls-2.0.1.js",
                 "~/Scripts/loading-bar.js",
                 "~/Scripts/valdr/valdr.js",
-                "~/Scripts/valdr/valdr-message.js"));
+                "~/Scripts/valdr/valdr-message.js",
+                "~/Scripts/angular-block-ui/angular-block-ui.js"));
         }
     }
 }

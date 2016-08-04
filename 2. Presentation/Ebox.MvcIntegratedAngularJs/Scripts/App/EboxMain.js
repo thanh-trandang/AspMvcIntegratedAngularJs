@@ -1,13 +1,22 @@
 ﻿(function () {
     angular.module('Common', [
-    'ui.router', 'ui.bootstrap', 'angular-loading-bar', 'ngAnimate', 'valdr']);
+    'ui.router', 'ui.bootstrap', 'ngAnimate', 'valdr', 'blockUI']);
 })();
 
 
 (function () {
-    var EboxMain = angular.module('EboxMain', ['Common']);
+    angular.module('EboxMain', ['Common']);
 
-    var HomeController = function ($scope) {
+    var BaseController = function ($scope, $http) {
+
+        var self = this;
+        self.SignInCommand = {
+            email: "trandangthanh@gmail.com",
+            password: "123456",
+            rememberMe: false,
+            debug: false
+        }
+
         $scope.topic =
            "Integrating ASP.NET MVC and AngularJS";
         $scope.author = "Tran Dang Thanh";
@@ -18,8 +27,20 @@
             placeHolder: "Please enter your keyword..."
         };
 
+
+
         this.beginSearch = function () {
             this.search.keyword = "Your search has been started. Please wait...";
+            $http.post('/Authentication/SignIn', self.SignInCommand)
+                .then(function successCallback(response) {
+                    // this callback will be called asynchronously
+                    // when the response is available
+                    // self.message = JSON.stringify(response);
+                }, function errorCallback(errorResponse) {
+                    // called asynchronously if an error occurs
+                    // or server returns response with an error status.
+                    self.message = JSON.stringify(errorResponse);
+                });
         };
 
         var initialize = function () {
@@ -29,8 +50,8 @@
         initialize();
     }
 
-    HomeController.$inject = ['$scope'];
-    EboxMain.controller("HomeController", HomeController);
+    BaseController.$inject = ['$scope', '$http'];
+    angular.module('EboxMain').controller("BaseController", BaseController);
 })();
 
 
