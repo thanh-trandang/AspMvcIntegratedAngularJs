@@ -10,7 +10,7 @@
 }
 
 @section jsCode {
-    angular.bootstrap(document.getElementById("signin"), ['SignInModule']);
+    angular.bootstrap(document.getElementById("mainBody"), ['SignInModule']);
 }
 
 <style type="text/css">
@@ -26,7 +26,7 @@
 </style>
 
 <div ng-non-bindable>
-    <div id="signin" data-ng-controller="SignInController as self"  block-ui="main">
+    <div data-ng-controller="SignInController as self">
         <div class="row">
             <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-9 col-xs-offset-1">
                 <div class="page-header">
