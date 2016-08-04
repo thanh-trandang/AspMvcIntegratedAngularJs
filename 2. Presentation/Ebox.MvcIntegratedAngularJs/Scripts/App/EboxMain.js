@@ -1,6 +1,5 @@
 ﻿(function () {
-    angular.module('Common', [
-    'ui.router', 'ui.bootstrap', 'ngAnimate', 'valdr', 'blockUI']);
+    angular.module('Common', ['ui.bootstrap', 'ngAnimate', 'valdr', 'blockUI']);
 })();
 
 

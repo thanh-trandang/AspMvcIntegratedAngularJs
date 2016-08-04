@@ -9,24 +9,20 @@
     <script src="~/Scripts/App/About/Controllers/AboutCtrl.js"></script>
 }
 @section jsCode {
-    angular.bootstrap(document.getElementById("about"), ['AboutModule']);
+    angular.bootstrap(document.getElementById("mainBody"), ['AboutModule']);
 }
 
-<div ng-non-bindable>
-    <div id="about" data-ng-controller="AboutController">
-        <h2>{{ pageHeading }}</h2>
-        <p>Use this area to provide additional information.</p>
+<div data-ng-controller="AboutController">
+    <h2>{{ pageHeading }}</h2>
+    <p>Use this area to provide additional information.</p>
 
-        <div>
-
-        </div>
-        
-
+    <div>
 
     </div>
 
 
 
 </div>
+
 
 
