@@ -1,5 +1,5 @@
 ﻿
 (function () {
-    angular.module('AboutModule', ['Common']);
+    angular.module('AboutModule', ['appCore']);
 })();
 

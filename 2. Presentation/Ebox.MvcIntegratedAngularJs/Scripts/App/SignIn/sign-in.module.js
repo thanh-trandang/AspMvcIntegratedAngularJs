@@ -1,4 +1,4 @@
 ﻿
 (function () {
-    angular.module('SignInModule', ['Common']);   
+    angular.module('SignInModule', ['appCore']);
 })();

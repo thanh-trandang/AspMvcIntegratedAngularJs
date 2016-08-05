@@ -40,7 +40,10 @@ namespace Ebox.MvcIntegratedAngularJs
                 "~/Scripts/loading-bar.js",
                 "~/Scripts/valdr/valdr.js",
                 "~/Scripts/valdr/valdr-message.js",
-                "~/Scripts/angular-block-ui/angular-block-ui.js"));
+                "~/Scripts/angular-block-ui/angular-block-ui.js",
+                "~/Scripts/moment/moment.js",
+                "~/Scripts/moment/moment-timezone-with-data.js",
+                "~/Scripts/moment/angular-moment.js"));
         }
     }
 }

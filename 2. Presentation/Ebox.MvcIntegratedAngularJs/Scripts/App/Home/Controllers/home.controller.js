@@ -4,9 +4,8 @@
 
     angular.module('HomeModule').controller("HomeController", HomeController);
 
-    HomeController.$inject = ['$scope', '$http'];
-    function HomeController($scope, $http) {
-
+    HomeController.$inject = ['$scope', '$http', 'moment'];
+    function HomeController($scope, $http, moment) {
         var self = this;
         self.SignInCommand = {
             email: "trandangthanh@gmail.com",
@@ -17,7 +16,7 @@
 
         $scope.topic =
            "Integrating ASP.NET MVC and AngularJS";
-        $scope.author = "Tran Dang Thanh";
+        $scope.time = moment().format('MMMM Do YYYY, h:mm:ss a') + ' - Time zone: ' + moment.tz.guess();
 
         this.search = {
             keyword: "",
