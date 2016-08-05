@@ -1,6 +1,7 @@
 ﻿(function () {
     var dependencies = [
             'ui.bootstrap',
+            'ui.checkbox',
             'ngAnimate', // needed by toastr
             'valdr',
             'blockUI',

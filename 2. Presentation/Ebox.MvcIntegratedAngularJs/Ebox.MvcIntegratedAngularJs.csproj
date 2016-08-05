@@ -134,7 +134,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\awesome-bootstrap-checkbox.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -164,6 +163,7 @@
     <Content Include="Scripts\angular-toastr\angular-toastr.min.js" />
     <Content Include="Scripts\angular-toastr\angular-toastr.tpls.js" />
     <Content Include="Scripts\angular-toastr\angular-toastr.tpls.min.js" />
+    <Content Include="Scripts\angular\angular-bootstrap-checkbox.js" />
     <Content Include="Scripts\App\configs.js" />
     <Content Include="Scripts\App\constants.js" />
     <Content Include="Scripts\App\Home\home.module.js" />
