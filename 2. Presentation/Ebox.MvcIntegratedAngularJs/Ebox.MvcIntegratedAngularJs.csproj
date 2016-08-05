@@ -119,6 +119,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AuthenticationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Feature\Authentication\AuthenticatedUser.cs" />
@@ -168,6 +169,8 @@
     <Content Include="Scripts\App\constants.js" />
     <Content Include="Scripts\App\Home\home.module.js" />
     <Content Include="Scripts\App\Home\Controllers\home.controller.js" />
+    <Content Include="Scripts\App\Register\Controllers\register.controller.js" />
+    <Content Include="Scripts\App\Register\register.module.js" />
     <Content Include="Scripts\moment\angular-moment.js" />
     <Content Include="Scripts\moment\moment-timezone-with-data.js" />
     <Content Include="Scripts\moment\moment.js" />
@@ -224,6 +227,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Authentication\SignIn.cshtml" />
     <Content Include="Scripts\ng-idle\angular-idle.map" />
+    <Content Include="Views\Account\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -232,6 +236,8 @@
     <Folder Include="Scripts\App\About\Services\" />
     <Folder Include="Scripts\App\Home\Directives\" />
     <Folder Include="Scripts\App\Home\Services\" />
+    <Folder Include="Scripts\App\Register\Directives\" />
+    <Folder Include="Scripts\App\Register\Services\" />
     <Folder Include="Scripts\App\SignIn\Directives\" />
     <Folder Include="Scripts\App\SignIn\Services\" />
   </ItemGroup>
