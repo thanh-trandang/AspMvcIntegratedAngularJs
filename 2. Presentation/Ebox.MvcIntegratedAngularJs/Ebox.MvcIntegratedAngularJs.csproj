@@ -156,8 +156,8 @@
     <Content Include="Scripts\angular-block-ui\angular-block-ui.js" />
     <Content Include="Scripts\angular-block-ui\angular-block-ui.min.css" />
     <Content Include="Scripts\angular-block-ui\angular-block-ui.min.js" />
-    <Content Include="Scripts\App\Home\App.js" />
-    <Content Include="Scripts\App\Home\Controllers\HomeCtrl.js" />
+    <Content Include="Scripts\App\Home\home.module.js" />
+    <Content Include="Scripts\App\Home\Controllers\home.controller.js" />
     <Content Include="Scripts\ui-router\angular-ui-router.js" />
     <Content Include="Scripts\angular\angular.min.js.map" />
     <Content Include="Scripts\angular-block-ui\angular-block-ui.css.map" />
@@ -169,11 +169,11 @@
     <Content Include="Scripts\angular\angular-route.js" />
     <Content Include="Scripts\angular\angular.js" />
     <Content Include="Scripts\angular\angular.min.js" />
-    <Content Include="Scripts\App\SignIn\App.js" />
-    <Content Include="Scripts\App\SignIn\Controllers\SignInCtrl.js" />
-    <Content Include="Scripts\App\EboxMain.js" />
-    <Content Include="Scripts\App\About\App.js" />
-    <Content Include="Scripts\App\About\Controllers\AboutCtrl.js" />
+    <Content Include="Scripts\App\SignIn\sign-in.module.js" />
+    <Content Include="Scripts\App\SignIn\Controllers\sign-in.controller.js" />
+    <Content Include="Scripts\App\app.js" />
+    <Content Include="Scripts\App\About\about.module.js" />
+    <Content Include="Scripts\App\About\Controllers\about.controller.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

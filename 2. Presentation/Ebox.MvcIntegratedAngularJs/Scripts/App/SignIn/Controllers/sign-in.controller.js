@@ -1,6 +1,11 @@
 ﻿
 (function () {
-    var SignInController = function ($scope, $http) {
+    'use strict';
+
+    angular.module('SignInModule').controller("SignInController", SignInController);
+
+    SignInController.$inject = ['$scope', '$http'];
+    function SignInController($scope, $http) {
 
         var self = this;
         self.SignInCommand = {
@@ -24,6 +29,8 @@
                     self.message = JSON.stringify(errorResponse);
                 });
         };
+
+
     };
 
     angular.module('SignInModule')
@@ -48,8 +55,7 @@
             });
         });
 
-    SignInController.$inject = ['$scope', '$http'];
-    angular.module('SignInModule').controller("SignInController", SignInController);
+
 })();
 
 

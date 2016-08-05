@@ -1,6 +1,11 @@
 ﻿
 (function () {
-    var HomeController = function ($scope, $http) {
+    'use strict';
+
+    angular.module('HomeModule').controller("HomeController", HomeController);
+
+    HomeController.$inject = ['$scope', '$http'];
+    function HomeController($scope, $http) {
 
         var self = this;
         self.SignInCommand = {
@@ -41,6 +46,4 @@
         initialize();
     }
 
-    HomeController.$inject = ['$scope', '$http'];
-    angular.module('HomeModule').controller("HomeController", HomeController);
 })();
