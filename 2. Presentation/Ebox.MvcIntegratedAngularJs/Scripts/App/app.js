@@ -1,10 +1,11 @@
 ﻿(function () {
     var dependencies = [
             'ui.bootstrap',
-            'ngAnimate',
+            'ngAnimate', // needed by toastr
             'valdr',
             'blockUI',
-            'angularMoment'
+            'angularMoment',
+            'toastr'
     ];
 
     angular.module('appCore', dependencies);

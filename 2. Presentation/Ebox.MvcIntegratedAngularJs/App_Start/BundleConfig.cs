@@ -26,10 +26,13 @@ namespace Ebox.MvcIntegratedAngularJs
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/bootstrap-theme.css",
-                      "~/Content/site.css",
                       "~/Content/loading-bar.css",
                       "~/Content/awesome-bootstrap-checkbox.css",
-                      "~/Content/angular-block-ui.css"));
+                      "~/Scripts/angular-block-ui/angular-block-ui.css",
+                      "~/Scripts/angular-block-ui/angular-block-ui.theme.css",
+                      "~/Scripts/angular-toastr/angular-toastr.css",
+                      "~/Scripts/angular-toastr/angular-toastr.theme.css",
+                      "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                 "~/Scripts/angular/angular.js",
@@ -43,7 +46,9 @@ namespace Ebox.MvcIntegratedAngularJs
                 "~/Scripts/angular-block-ui/angular-block-ui.js",
                 "~/Scripts/moment/moment.js",
                 "~/Scripts/moment/moment-timezone-with-data.js",
-                "~/Scripts/moment/angular-moment.js"));
+                "~/Scripts/moment/angular-moment.js",
+                "~/Scripts/angular-toastr/angular-toastr.js",
+                "~/Scripts/angular-toastr/angular-toastr.tpls.js"));
         }
     }
 }

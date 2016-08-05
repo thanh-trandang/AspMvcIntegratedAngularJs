@@ -9,22 +9,10 @@
     <script src="~/Scripts/App/SignIn/Controllers/sign-in.controller.js"></script>
 }
 
+
 @section jsCode {
     angular.bootstrap(document.getElementById("mainBody"), ['SignInModule']);
 }
-
-<style type="text/css">
-    .valdr-message {
-        display: none;
-    }
-
-        .valdr-message.ng-invalid.ng-touched.ng-dirty {
-            display: inline;
-            font-size: small;
-            color: red;
-        }
-</style>
-
 
 <div data-ng-controller="SignInController as self">
     <div class="row">
@@ -83,10 +71,5 @@
             Debug
         </label>
     </div>
-    <button class="btn btn-default" ng-click="toggleBlock('main')">
-        <span class="glyphicon glyphicon-pause"></span>
-        Show BlockUI
-    </button>
-
 </div>
 

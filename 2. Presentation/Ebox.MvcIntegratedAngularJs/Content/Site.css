@@ -15,3 +15,16 @@
 .dl-horizontal dt {
     white-space: normal;
 }
+
+
+.valdr-message {
+    display: none;
+}
+
+    .valdr-message.ng-invalid.ng-touched.ng-dirty {
+        display: inline;
+        font-size: small;
+        font-weight: bold;
+        color: red;
+    }
+

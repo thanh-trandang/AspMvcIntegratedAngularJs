@@ -4,8 +4,10 @@
 
     angular.module('SignInModule').controller("SignInController", SignInController);
 
-    SignInController.$inject = ['$scope', '$http'];
-    function SignInController($scope, $http) {
+    SignInController.$inject = ['$scope', '$http', 'blockUIConfig', 'toastr'];
+    function SignInController($scope, $http, blockUIConfig, toastr) {
+
+        blockUIConfig.message = "Validating your identity...";   
 
         var self = this;
         self.SignInCommand = {
@@ -23,6 +25,7 @@
                     // this callback will be called asynchronously
                     // when the response is available
                     // self.message = JSON.stringify(response);
+                    toastr.success("You signed in successfully.");
                 }, function errorCallback(errorResponse) {
                     // called asynchronously if an error occurs
                     // or server returns response with an error status.
