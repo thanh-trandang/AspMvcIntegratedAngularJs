@@ -5,7 +5,8 @@
             'valdr',
             'blockUI',
             'angularMoment',
-            'toastr'
+            'toastr',
+            'ngIdle'
     ];
 
     angular.module('appCore', dependencies);

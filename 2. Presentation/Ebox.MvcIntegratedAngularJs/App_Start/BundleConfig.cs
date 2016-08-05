@@ -48,7 +48,8 @@ namespace Ebox.MvcIntegratedAngularJs
                 "~/Scripts/moment/moment-timezone-with-data.js",
                 "~/Scripts/moment/angular-moment.js",
                 "~/Scripts/angular-toastr/angular-toastr.js",
-                "~/Scripts/angular-toastr/angular-toastr.tpls.js"));
+                "~/Scripts/angular-toastr/angular-toastr.tpls.js",
+                "~/Scripts/ng-idle/angular-idle.js"));
         }
     }
 }

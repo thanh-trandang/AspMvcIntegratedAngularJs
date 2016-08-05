@@ -41,29 +41,36 @@
 
                 <div class="form-group">
                     <div class="checkbox checkbox-circle checkbox-primary">
+
                         <input type="checkbox" class="styled" id="remember" name="remember" ng-model="self.SignInCommand.rememberMe">
                         <label for="remember">
-                            Remember me
+                            Keep me logged in
                         </label>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <button class="btn btn-default" type="submit" ng-disabled="signInForm.$invalid">
+                    <button class="btn btn-default btn-block" type="submit" ng-disabled="signInForm.$invalid">
                         <span class="glyphicon glyphicon-log-in"></span>
                         Sign In
                     </button>
-
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            @Html.ActionLink("Register", "Register", "Account")
+                        </div>
+                        <div class="col-md-6 text-right">
+                            @Html.ActionLink("Forgot Password?", "ForgotPassword", "Account")
+                        </div>
+                    </div>
 
                 </div>
                 <div class="form-group" ng-show="self.SignInCommand.debug">
                     <textarea class="form-control" rows="10">{{ signInForm.$error | json }}</textarea>
                 </div>
             </form>
-
         </div>
-
-
     </div>
     <div class="checkbox checkbox-circle checkbox-warning">
         <input id="debug" type="checkbox" name="debug" ng-model="self.SignInCommand.debug">

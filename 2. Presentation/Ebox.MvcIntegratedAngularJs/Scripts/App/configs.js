@@ -27,4 +27,17 @@
         });
     });
 
+    angular.module('appCore')
+    .config(function (IdleProvider, KeepaliveProvider) {
+        IdleProvider.idle(5); // in seconds
+        IdleProvider.timeout(5); // in seconds
+        KeepaliveProvider.interval(2); // in seconds
+    });
+
+    angular.module('appCore')
+    .run(function (Idle) {
+        // start watching when the app runs. also starts the Keepalive service by default.
+        Idle.watch();
+    });
+
 })();
