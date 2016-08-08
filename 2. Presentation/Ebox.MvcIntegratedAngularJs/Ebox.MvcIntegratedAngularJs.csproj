@@ -157,6 +157,9 @@
     <Content Include="Scripts\angular-block-ui\angular-block-ui.js" />
     <Content Include="Scripts\angular-block-ui\angular-block-ui.min.css" />
     <Content Include="Scripts\angular-block-ui\angular-block-ui.min.js" />
+    <Content Include="Scripts\angular-spinkit\angular-spinkit.js" />
+    <Content Include="Scripts\angular-spinkit\angular-spinkit.min.css" />
+    <Content Include="Scripts\angular-spinkit\angular-spinkit.min.js" />
     <Content Include="Scripts\angular-toastr\angular-toastr.theme.css" />
     <Content Include="Scripts\angular-toastr\angular-toastr.css" />
     <Content Include="Scripts\angular-toastr\angular-toastr.js" />
@@ -176,6 +179,13 @@
     <Content Include="Scripts\moment\moment.js" />
     <Content Include="Scripts\ng-idle\angular-idle.js" />
     <Content Include="Scripts\ng-idle\angular-idle.min.js" />
+    <Content Include="Scripts\ng-ladda\ladda-themeless.min.css" />
+    <Content Include="Scripts\ng-ladda\ladda.jquery.min.js" />
+    <Content Include="Scripts\ng-ladda\ladda.min.css" />
+    <Content Include="Scripts\ng-ladda\ladda.min.js" />
+    <Content Include="Scripts\ng-ladda\ng-ladda.css" />
+    <Content Include="Scripts\ng-ladda\ng-ladda.js" />
+    <Content Include="Scripts\spinjs\spin.min.js" />
     <Content Include="Scripts\ui-router\angular-ui-router.js" />
     <Content Include="Scripts\angular\angular.min.js.map" />
     <Content Include="Scripts\angular-block-ui\angular-block-ui.css.map" />

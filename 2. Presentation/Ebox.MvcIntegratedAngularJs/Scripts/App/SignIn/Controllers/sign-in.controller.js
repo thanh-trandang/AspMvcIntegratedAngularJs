@@ -4,10 +4,10 @@
 
     angular.module('SignInModule').controller("SignInController", SignInController);
 
-    SignInController.$inject = ['$scope', '$http', 'blockUIConfig', 'toastr'];
-    function SignInController($scope, $http, blockUIConfig, toastr) {
-
-        blockUIConfig.message = "Validating your identity...";   
+    SignInController.$inject = ['$scope', '$http', 'toastr', 'Constants'];
+    function SignInController($scope, $http, toastr, Constants) {
+        var regex = new RegExp(Constants.LOG_IN, 'i');
+        $scope.blockPattern = regex.toString();
 
         var self = this;
         self.SignInCommand = {
@@ -20,7 +20,7 @@
         self.message = "";
 
         self.signIn = function () {
-            $http.post('/Authentication/SignIn', self.SignInCommand)
+            $http.post(Constants.LOG_IN, self.SignInCommand)
                 .then(function successCallback(response) {
                     // this callback will be called asynchronously
                     // when the response is available
@@ -35,29 +35,6 @@
 
 
     };
-
-    angular.module('SignInModule')
-        .config(function (valdrProvider, valdrMessageProvider) {
-            valdrMessageProvider.setTemplate('<div class="valdr-message">{{ violation.message }}</div>');
-            valdrProvider.addConstraints({
-                'SignIn': {
-                    'email': {
-                        "email": {
-                            "message": "Not a valid email address."
-                        },
-                        'required': {
-                            'message': 'Please enter your email.'
-                        }
-                    },
-                    'password': {
-                        'required': {
-                            'message': 'Please enter your password.'
-                        }
-                    }
-                }
-            });
-        });
-
 
 })();
 

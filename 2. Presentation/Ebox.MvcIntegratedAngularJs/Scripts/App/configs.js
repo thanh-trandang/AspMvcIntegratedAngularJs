@@ -11,7 +11,9 @@
         .config(function (blockUIConfig) {
             blockUIConfig.message = 'Hang on!';
             blockUIConfig.delay = 0;
+            blockUIConfig.autoInjectBodyBlock = false;
             blockUIConfig.blockBrowserNavigation = true;
+            blockUIConfig.template = '<div class=\"block-ui-overlay\"></div><div class=\"block-ui-message-container\" aria-live=\"assertive\" aria-atomic=\"true\"></div>';
         });
 
     angular.module('appCore')
@@ -27,17 +29,12 @@
         });
     });
 
-    angular.module('appCore')
-    .config(function (IdleProvider, KeepaliveProvider) {
-        IdleProvider.idle(5); // in seconds
-        IdleProvider.timeout(5); // in seconds
-        KeepaliveProvider.interval(2); // in seconds
-    });
+    angular.module('appCore').config(validationCofig);  
 
-    angular.module('appCore')
-    .run(function (Idle) {
-        // start watching when the app runs. also starts the Keepalive service by default.
-        Idle.watch();
-    });
+    function validationCofig(valdrProvider, valdrMessageProvider) {
+        valdrMessageProvider.setTemplate('<div class="valdr-message">{{ violation.message }}</div>');
+    }
+
+
 
 })();

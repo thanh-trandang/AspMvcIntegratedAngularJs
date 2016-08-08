@@ -11,8 +11,15 @@
 
 
 @section jsCode {
-    angular.bootstrap(document.getElementById("mainBody"), ['SignInModule']);
+
+    $(document).ready(function() {
+        $("#signInForm").attr("block-ui", "");
+        $("#signInForm").attr("block-ui-pattern", "{{blockPattern}}");
+        angular.bootstrap(document.getElementById("mainBody"), ['SignInModule']);
+
+    });
 }
+
 
 <div data-ng-controller="SignInController as self">
     <div class="row">
@@ -20,7 +27,7 @@
             <div class="page-header">
                 <h1>Please sign in...</h1>
             </div>
-            <form name="signInForm" valdr-type="SignIn" novalidate role="form" ng-submit="signInForm.$valid && self.signIn()">
+            <form id="signInForm" name="signInForm" valdr-type="SignIn" novalidate role="form" ng-submit="signInForm.$valid && self.signIn()">
                 <div class="form-group" valdr-form-group>
                     <div class="input-group">
                         <span class="input-group-addon">
@@ -48,7 +55,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button class="btn btn-default btn-block" type="submit" ng-disabled="signInForm.$invalid">
+                    <button data-spinner-color="white" data-style="zoom-in" ng-ladda="sign-in" class="btn btn-default btn-block" type="submit" ng-disabled="signInForm.$invalid">
                         <span class="glyphicon glyphicon-log-in"></span>
                         Sign In
                     </button>

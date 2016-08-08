@@ -31,6 +31,11 @@ namespace Ebox.MvcIntegratedAngularJs
                       "~/Scripts/angular-block-ui/angular-block-ui.theme.css",
                       "~/Scripts/angular-toastr/angular-toastr.css",
                       "~/Scripts/angular-toastr/angular-toastr.theme.css",
+
+                      "~/Scripts/ng-ladda/ladda-themeless.min.css",
+
+                      "~/Scripts/angular-spinkit/angular-spinkit.min.css",
+
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
@@ -38,7 +43,7 @@ namespace Ebox.MvcIntegratedAngularJs
                 "~/Scripts/angular/angular-animate.js",
                 "~/Scripts/angular/angular-route.js",
                 "~/Scripts/angular/angular-bootstrap-checkbox.js",
-                "~/Scripts/ui-router/angular-ui-router.js",                
+                "~/Scripts/ui-router/angular-ui-router.js",
                 "~/Scripts/ui-bootstrap/ui-bootstrap-tpls-2.0.1.js",
                 "~/Scripts/loading-bar.js",
                 "~/Scripts/valdr/valdr.js",
@@ -49,7 +54,15 @@ namespace Ebox.MvcIntegratedAngularJs
                 "~/Scripts/moment/angular-moment.js",
                 "~/Scripts/angular-toastr/angular-toastr.js",
                 "~/Scripts/angular-toastr/angular-toastr.tpls.js",
-                "~/Scripts/ng-idle/angular-idle.js"));
+                "~/Scripts/ng-idle/angular-idle.js",
+
+                "~/Scripts/spinjs/spin.min.js",
+
+                 "~/Scripts/ng-ladda/ladda.jquery.min.js",
+                 "~/Scripts/ng-ladda/ladda.min.js",
+                 "~/Scripts/ng-ladda/ng-ladda.js",
+
+                 "~/Scripts/angular-spinkit/angular-spinkit.js"));
         }
     }
 }

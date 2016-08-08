@@ -7,7 +7,9 @@
             'blockUI',
             'angularMoment',
             'toastr',
-            'ngIdle'
+            'ngIdle',
+            'io.dennis.ladda',
+            'angular-spinkit'
     ];
 
     angular.module('appCore', dependencies);

@@ -4,8 +4,10 @@
 
     angular.module('RegisterModule').controller("RegisterController", RegisterController);
 
-    RegisterController.$inject = ['$scope', '$http', 'blockUIConfig', 'toastr'];
-    function RegisterController($scope, $http, blockUIConfig, toastr) {
+    RegisterController.$inject = ['$scope', '$http', 'toastr', 'Constants'];
+    function RegisterController($scope, $http, toastr, Constants) {
+        var regex = new RegExp(Constants.REGISTER, 'i');
+        $scope.blockPattern = regex.toString();
 
         var self = this;
         self.RegisterCommand = {
@@ -16,7 +18,7 @@
         }
 
         self.register = function () {
-            $http.post('/Account/Register', self.RegisterCommand)
+            $http.post(Constants.REGISTER, self.RegisterCommand)
                 .then(function successCallback(response) {
                     // this callback will be called asynchronously
                     // when the response is available
@@ -28,43 +30,7 @@
                     toastr.error("Sorry! We cannot register you for now.");
                 });
         };
-
-
-    };
-
-    angular.module('RegisterModule')
-        .config(function (valdrProvider, valdrMessageProvider) {
-            valdrMessageProvider.setTemplate('<div class="valdr-message">{{ violation.message }}</div>');
-            valdrProvider.addConstraints({
-                'Register': {
-                    'email': {
-                        "email": {
-                            "message": "Not a valid email address."
-                        },
-                        'required': {
-                            'message': 'Please enter your email.'
-                        }
-                    },
-                    'password': {
-                        'required': {
-                            'message': 'Please enter your password.'
-                        }
-                    }
-                    ,
-                    'firstName': {
-                        'required': {
-                            'message': 'Please enter your first name.'
-                        }
-                    }
-                    ,
-                    'lastName': {
-                        'required': {
-                            'message': 'Please enter your last name.'
-                        }
-                    }
-                }
-            });
-        });
+    };    
 })();
 
 
