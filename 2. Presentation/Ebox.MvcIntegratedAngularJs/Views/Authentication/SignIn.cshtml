@@ -48,14 +48,13 @@
 
                 <div class="form-group">
                     <checkbox id="remember" ng-model="self.SignInCommand.rememberMe"></checkbox>
-                    @*<input type="checkbox" class="styled" id="remember" name="remember" ng-model="self.SignInCommand.rememberMe">*@
                     <label for="remember">
                         Keep me logged in
                     </label>
                 </div>
 
                 <div class="form-group">
-                    <button data-spinner-color="white" data-style="zoom-in" ng-ladda="sign-in" class="btn btn-default btn-block" type="submit" ng-disabled="signInForm.$invalid">
+                    <button data-spinner-color="black" data-style="zoom-in" ng-ladda="sign-in" class="btn btn-default btn-block" type="submit" ng-disabled="signInForm.$invalid">
                         <span class="glyphicon glyphicon-log-in"></span>
                         Sign In
                     </button>
