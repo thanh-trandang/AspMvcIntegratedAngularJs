@@ -9,7 +9,8 @@
             'toastr',
             'ngIdle',
             'io.dennis.ladda',
-            'angular-spinkit'
+            'angular-spinkit',
+            'ngFlash'
     ];
 
     angular.module('appCore', dependencies);

@@ -36,6 +36,8 @@ namespace Ebox.MvcIntegratedAngularJs
 
                       "~/Scripts/angular-spinkit/angular-spinkit.min.css",
 
+                      //"~/Scripts/angular-flash/angular-flash.css",
+
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
@@ -62,7 +64,9 @@ namespace Ebox.MvcIntegratedAngularJs
                  "~/Scripts/ng-ladda/ladda.min.js",
                  "~/Scripts/ng-ladda/ng-ladda.js",
 
-                 "~/Scripts/angular-spinkit/angular-spinkit.js"));
+                 "~/Scripts/angular-spinkit/angular-spinkit.js",
+
+                 "~/Scripts/angular-flash/angular-flash.js"));
         }
     }
 }

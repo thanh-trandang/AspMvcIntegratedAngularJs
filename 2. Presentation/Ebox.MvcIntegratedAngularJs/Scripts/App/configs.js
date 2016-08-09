@@ -11,7 +11,7 @@
         .config(function (blockUIConfig) {
             blockUIConfig.message = 'Hang on!';
             blockUIConfig.delay = 0;
-            blockUIConfig.autoInjectBodyBlock = false;
+            blockUIConfig.autoInjectBodyBlock = true;
             blockUIConfig.blockBrowserNavigation = true;
             blockUIConfig.template = '<div class=\"block-ui-overlay\"></div><div class=\"block-ui-message-container\" aria-live=\"assertive\" aria-atomic=\"true\"></div>';
         });
@@ -24,7 +24,7 @@
             extendedTimeOut: 0,
             autoDismiss: false,
             closeHtml: '<button>&times;</button>',
-            positionClass: 'toast-bottom-right',
+            positionClass: 'toast-bottom-full-width',
             target: 'body'
         });
     });
@@ -33,6 +33,14 @@
 
     function validationCofig(valdrProvider, valdrMessageProvider) {
         valdrMessageProvider.setTemplate('<div class="valdr-message">{{ violation.message }}</div>');
+    }
+
+    angular.module('appCore')
+    .config(flashMessageConfig);
+
+    function flashMessageConfig(FlashProvider) {
+        FlashProvider.setTimeout(0);
+        FlashProvider.setShowClose(true);
     }
 
 
