@@ -2,7 +2,7 @@
     angular.module('appCore')
         .constant('moment', moment);    
 
-    var Constants = {
+    var Urls = {
         LOG_IN: '/authentication/signin',
         REGISTER: '/Account/Register'
     };
@@ -15,9 +15,19 @@
         LAST_NAME_REQUIRED: 'Please enter your last name.'
     };
 
+    var NotificationMessages = {
+        SIGN_IN_SUCCESS: "You have signed in successfully.",
+        SIGN_IN_FAIL: "Invalid email or password.",
+        REGISTER_SUCCESS: "Congratulation! You have registered successfully.",
+        REGISTER_FAIL_DUPLICATED_EMAIL: "This email has been used by other user."
+    };
+
     angular.module('appCore')
-        .constant('Constants', Constants);
+        .constant('Urls', Urls);
 
     angular.module('appCore')
         .constant('ValidationMessages', ValidationMessages);
+
+    angular.module('appCore')
+    .constant('NotificationMessages', NotificationMessages);
 })();

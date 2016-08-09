@@ -6,11 +6,11 @@
     angular.module('SignInModule')
         .run(Config);
 
-    Config.$inject = ['ngLaddaService', 'Constants'];
-    function Config(ngLaddaService, Constants) {
+    Config.$inject = ['ngLaddaService', 'Urls'];
+    function Config(ngLaddaService, Urls) {
 
         // link a httpRequest to a unique event/name
-        ngLaddaService.register('POST', Constants.LOG_IN, 'sign-in');
+        ngLaddaService.register('POST', Urls.LOG_IN, 'sign-in');
     }
 
     angular.module('SignInModule')
