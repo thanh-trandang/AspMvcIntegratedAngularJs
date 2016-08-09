@@ -1,0 +1,31 @@
+﻿
+@using Microsoft.AspNet.Identity
+@using System.Security.Claims
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Authentication", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+
+        <ul class="nav navbar-nav navbar-right">
+            @{
+                var email = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Email);
+            }
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@email.Value <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="javascript:document.getElementById('logoutForm').submit()"><img width="30" height="30" src="~/images/nurse-1.png" />Sign Out</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+                    }
+                }
+                else
+                {
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Sign In", "SignIn", "Authentication", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>                        
+                    </ul>
+                }

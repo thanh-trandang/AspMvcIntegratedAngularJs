@@ -4,8 +4,8 @@
 
     angular.module('SignInModule').controller("SignInController", SignInController);
 
-    SignInController.$inject = ['$scope', '$http', 'toastr', 'Urls', 'Flash', 'NotificationMessages'];
-    function SignInController($scope, $http, toastr, Urls, Flash, NotificationMessages) {
+    SignInController.$inject = ['$scope', '$http', 'toastr', 'Urls', 'Flash', 'NotificationMessages', '$window'];
+    function SignInController($scope, $http, toastr, Urls, Flash, NotificationMessages, $window) {
         var regex = new RegExp(Urls.LOG_IN, 'i');
         $scope.blockPattern = regex.toString();
 
@@ -26,7 +26,13 @@
                     // when the response is available
                     // self.message = JSON.stringify(response);
                     // toastr.success("You signed in successfully.");
-                    var id = Flash.create('success', NotificationMessages.SIGN_IN_SUCCESS, 0, { id: 'sign-in-success' }, true);
+                    if (parseInt(response.status) === 200) {
+                        $window.location.href = '/home/index';
+                    } else {
+                        Flash.create('danger', NotificationMessages.SIGN_IN_FAIL, 0, { id: 'sign-in-failed' }, true);
+                    }
+
+                    
                 }, function errorCallback(errorResponse) {
                     // called asynchronously if an error occurs
                     // or server returns response with an error status.

@@ -1,8 +1,12 @@
 ﻿using Ebox.MvcIntegratedAngularJs.Feature.Authentication;
+using Ebox.MvcIntegratedAngularJs.Validation.MvcExtenstion;
+using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Security.Claims;
 using System.Web;
 using System.Web.Mvc;
 
@@ -10,60 +14,53 @@ namespace Ebox.MvcIntegratedAngularJs.Controllers
 {
     public class AuthenticationController : Controller
     {
+        private readonly IAuthenticationManager _authenticationManager;
+        private readonly IAuthenticationService _authenticationService;
+
+        public AuthenticationController(IAuthenticationManager authenticationManager, IAuthenticationService authenticationService)
+        {
+            this._authenticationManager = authenticationManager;
+            this._authenticationService = authenticationService;
+        }
+
         public ActionResult SignIn()
         {
             return View();
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public ActionResult SignIn(LoginCommand logInCommand)
         {
             System.Threading.Thread.Sleep(10000);
-            if (ModelState.IsValid)
+
+            if (ModelState.IsValid && this._authenticationService.Validate(logInCommand.Email, logInCommand.Password))
             {
+                var identity = new ClaimsIdentity(new[] { new Claim(ClaimTypes.Email, logInCommand.Email), }, DefaultAuthenticationTypes.ApplicationCookie);
+
+                this._authenticationManager.SignIn(
+                    new AuthenticationProperties
+                    {
+                        IsPersistent = logInCommand.RememberMe
+                    }, identity);
+
                 return Json(new { success = true });
             }
-
-            var errorList = new List<ValidationError>();
-            this.ModelState.Keys.ToList().ForEach(key =>
+            else
             {
-                ModelState modelState = null;
-                if(this.ModelState.TryGetValue(key, out modelState))
-                {
-                    errorList.AddRange(modelState.Errors.ToList()
-                    .Select(err => new ValidationError
-                    {
-                        Key = key,
-                        Message = err.ErrorMessage
-                    }));
-                }
-            });
-
-            var response = new ValidationErrorResponse()
-            {
-                Type = "Validation",
-                Errors = errorList
-            };
+                ModelState.AddModelError("", "Invalid login attempt.");
+            }
 
             this.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-            return Json(response, JsonRequestBehavior.DenyGet);
+            return Json(this.ValidationJsonResponse(), JsonRequestBehavior.DenyGet);
         }
-    }
 
-    public class ValidationError
-    {
-        public string Key { get; set; }
-        public string Message { get; set; }
-    }
-
-    public class ValidationErrorResponse
-    {
-        public string Type { get; set; }
-        public IEnumerable<ValidationError> Errors { get; set; }
-
-        public ValidationErrorResponse()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult LogOff()
         {
-            Errors = new List<ValidationError>();
+            this._authenticationManager.SignOut();
+            return RedirectToAction("SignIn");
         }
     }
 }
