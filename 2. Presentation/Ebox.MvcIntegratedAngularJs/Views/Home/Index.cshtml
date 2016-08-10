@@ -18,6 +18,15 @@
 
         <h3>{{ time }}</h3>
         <h4 id="angularVersion">Angular's version: </h4>
+        <h5><strong>OS: {{os | uppercase}}</strong></h5>
+        <h5><strong>Browser: {{browser | uppercase}}</strong></h5>
+        <h5><strong>Device: {{device | uppercase}}</strong></h5>
+
+        <h5 ng-show="isDesktop"><strong>Device is desktop</strong></h5>
+
+        <h5 ng-show="isMobile"><strong>Device is mobile</strong></h5>
+
+        <h5 ng-show="isTablet"><strong>Device is tablet</strong></h5>
     </div>
 
     <div id="searchPredicate" class="row">

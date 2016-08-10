@@ -10,7 +10,8 @@
             'ngIdle',
             'io.dennis.ladda',
             'angular-spinkit',
-            'ngFlash'
+            'ngFlash',
+            'ng.deviceDetector'
     ];
 
     angular.module('appCore', dependencies);

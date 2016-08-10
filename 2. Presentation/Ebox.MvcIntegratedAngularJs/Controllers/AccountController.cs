@@ -18,7 +18,7 @@ namespace Ebox.MvcIntegratedAngularJs.Controllers
         [HttpPost]
         public ActionResult Register(RegistrationCommand command)
         {
-            System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(5000);
             return View();
         }
     }

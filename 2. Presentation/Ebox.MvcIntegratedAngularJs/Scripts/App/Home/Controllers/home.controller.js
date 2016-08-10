@@ -4,8 +4,8 @@
 
     angular.module('HomeModule').controller("HomeController", HomeController);
 
-    HomeController.$inject = ['$scope', '$http', 'moment'];
-    function HomeController($scope, $http, moment) {
+    HomeController.$inject = ['$scope', '$http', 'moment', 'deviceDetector'];
+    function HomeController($scope, $http, moment, deviceDetector) {
         var self = this;
         self.SignInCommand = {
             email: "trandangthanh@gmail.com",
@@ -16,7 +16,15 @@
 
         $scope.topic =
            "Integrating ASP.NET MVC and AngularJS";
+
         $scope.time = moment().format('MMMM Do YYYY, h:mm:ss a') + ' - Time zone: ' + moment.tz.guess();
+        $scope.os = deviceDetector.os + "/" + deviceDetector.os_version;
+        $scope.browser = deviceDetector.browser + "/" + deviceDetector.browser_version;
+        $scope.device = deviceDetector.device;
+
+        $scope.isDesktop = deviceDetector.isDesktop();
+        $scope.isMobile = deviceDetector.isMobile();
+        $scope.isTablet = deviceDetector.isTablet();
 
         this.search = {
             keyword: "",

@@ -32,7 +32,7 @@ namespace Ebox.MvcIntegratedAngularJs.Controllers
         [AllowAnonymous]
         public ActionResult SignIn(LoginCommand logInCommand)
         {
-            System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(5000);
 
             if (ModelState.IsValid && this._authenticationService.Validate(logInCommand.Email, logInCommand.Password))
             {

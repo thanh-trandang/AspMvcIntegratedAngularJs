@@ -66,7 +66,10 @@ namespace Ebox.MvcIntegratedAngularJs
 
                  "~/Scripts/angular-spinkit/angular-spinkit.js",
 
-                 "~/Scripts/angular-flash/angular-flash.js"));
+                 "~/Scripts/angular-flash/angular-flash.js",
+
+                 "~/Scripts/re-tree/re-tree.js",
+                 "~/Scripts/ng-device-detector/ng-device-detector.js"));
         }
     }
 }

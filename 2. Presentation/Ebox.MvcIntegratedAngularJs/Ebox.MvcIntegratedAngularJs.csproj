@@ -249,6 +249,8 @@
     <Content Include="Scripts\moment\angular-moment.js" />
     <Content Include="Scripts\moment\moment-timezone-with-data.js" />
     <Content Include="Scripts\moment\moment.js" />
+    <Content Include="Scripts\ng-device-detector\ng-device-detector.js" />
+    <Content Include="Scripts\ng-device-detector\ng-device-detector.min.js" />
     <Content Include="Scripts\ng-idle\angular-idle.js" />
     <Content Include="Scripts\ng-idle\angular-idle.min.js" />
     <Content Include="Scripts\ng-ladda\ladda-themeless.min.css" />
@@ -257,6 +259,8 @@
     <Content Include="Scripts\ng-ladda\ladda.min.js" />
     <Content Include="Scripts\ng-ladda\ng-ladda.css" />
     <Content Include="Scripts\ng-ladda\ng-ladda.js" />
+    <Content Include="Scripts\re-tree\re-tree.js" />
+    <Content Include="Scripts\re-tree\re-tree.min.js" />
     <Content Include="Scripts\spinjs\spin.min.js" />
     <Content Include="Scripts\ui-router\angular-ui-router.js" />
     <Content Include="Scripts\angular\angular.min.js.map" />
@@ -265,6 +269,7 @@
     <Content Include="Scripts\angular-block-ui\angular-block-ui.min.js.map" />
     <Content Include="Scripts\angular-flash\angular-flash.js.map" />
     <Content Include="Scripts\angular-flash\angular-flash.min.js.map" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Properties\PublishProfiles\SmartASP.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\angular\angular-animate.js" />
