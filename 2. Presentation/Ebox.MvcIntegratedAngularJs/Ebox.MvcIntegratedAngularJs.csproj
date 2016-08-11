@@ -180,6 +180,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AuthenticationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="DatabaseModel\User.cs" />
     <Compile Include="Feature\Authentication\AuthenticatedUser.cs" />
     <Compile Include="Feature\Authentication\AuthenticationService.cs" />
@@ -189,6 +190,7 @@
     <Compile Include="Feature\JobSeekerAccount\JobSeeker.cs" />
     <Compile Include="Feature\JobSeekerAccount\Resume.cs" />
     <Compile Include="Feature\JobSeekerAccount\ResumeListView.cs" />
+    <Compile Include="Feature\UserProfile\EditProfileCommand.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -319,6 +321,7 @@
     <Content Include="Scripts\ng-idle\angular-idle.map" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Profile\EditProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
