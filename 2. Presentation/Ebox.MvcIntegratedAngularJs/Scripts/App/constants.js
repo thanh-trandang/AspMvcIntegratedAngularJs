@@ -4,7 +4,8 @@
 
     var Urls = {
         LOG_IN: '/authentication/signin',
-        REGISTER: '/Account/Register'
+        REGISTER: '/Account/Register',
+        EDIT_PROFILE: '/Profile/EditProfile'
     };
 
     var ValidationMessages = {
@@ -19,7 +20,8 @@
         SIGN_IN_SUCCESS: "You have signed in successfully.",
         SIGN_IN_FAIL: "Invalid email or password.",
         REGISTER_SUCCESS: "Congratulation! You have registered successfully.",
-        REGISTER_FAIL_DUPLICATED_EMAIL: "This email has been used by other user."
+        REGISTER_FAIL_DUPLICATED_EMAIL: "This email has been used by other user.",
+        EDIT_PROFILE_SUCCESS: "Your profile has been updated."
     };
 
     angular.module('appCore')

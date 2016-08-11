@@ -11,5 +11,7 @@ namespace Ebox.MvcIntegratedAngularJs.DatabaseModel
         public String PasswordHash { get; set; }
         public String FirsName { get; set; }
         public String LastName { get; set; }
+
+        public DateTime? DateOfBirth { get; set; }
     }
 }

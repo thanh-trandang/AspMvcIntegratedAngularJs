@@ -10,7 +10,9 @@ namespace Ebox.MvcIntegratedAngularJs.Repositories
     {
         public User FindByEmail(string email)
         {
-            return this.Users().Where(u => u.Email.Equals(email)).SingleOrDefault();
+            return this.Users().Where(u => u.Email
+            .Equals(email, StringComparison.CurrentCultureIgnoreCase))
+            .SingleOrDefault();
         }
 
         public List<User> Users()
