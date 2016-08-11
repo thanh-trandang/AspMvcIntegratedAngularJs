@@ -4,8 +4,8 @@
 
     angular.module('EditProfileModule').controller("EditProfileController", EditProfileController);
 
-    EditProfileController.$inject = ['$scope', '$http', 'toastr', 'Urls', 'Flash', 'NotificationMessages'];
-    function EditProfileController($scope, $http, toastr, Urls, Flash, NotificationMessages) {
+    EditProfileController.$inject = ['$scope', '$http', 'toastr', 'Urls', 'Flash', 'NotificationMessages', 'moment'];
+    function EditProfileController($scope, $http, toastr, Urls, Flash, NotificationMessages, moment) {
         var regex = new RegExp(Urls.EDIT_PROFILE, 'i');
         $scope.blockPattern = regex.toString();
 
@@ -19,7 +19,7 @@
         };
 
         $scope.formats = ['yyyy-MM-dd', 'dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-        $scope.format = $scope.formats[0];
+        $scope.format = $scope.formats[3];
         $scope.altInputFormats = ['M!/d!/yyyy'];
 
         $scope.popup1 = {
@@ -36,6 +36,7 @@
 
         $scope.init = function (EditProfile) {
             self.EditProfile = EditProfile;
+            self.EditProfile.DateOfBirth = moment(self.EditProfile.DateOfBirth).toDate();;
         };
 
 

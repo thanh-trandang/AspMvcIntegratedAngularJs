@@ -24,7 +24,7 @@ namespace Ebox.MvcIntegratedAngularJs.Controllers
         {
             var email = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Email);
             User user = this._accountRepository.FindByEmail(email.Value);
-            user.DateOfBirth = DateTime.Now;
+            user.DateOfBirth = new DateTime(1985, 11, 16);
 
             return View(new EditProfileCommand
             { Email = user.Email, FirstName = user.FirsName, LastName = user.LastName, DateOfBirth = user.DateOfBirth });
